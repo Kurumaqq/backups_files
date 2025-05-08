@@ -34,5 +34,5 @@ if __name__ == '__main__':
         
         if dirs_input != []: dirs_archive(dirs_input, dir_output, format)
         if dir_input != []: dir_archive(dir_input, dir_output, format)
-        # sleep(timer)
+        sleep(timer)
     
