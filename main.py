@@ -20,16 +20,17 @@ def dir_archive(dir_input : list, dir_output : str, format : str) -> None:
         make_archive(full_path_output, format, full_path_input)
 
 
-with open('config.json', 'r') as read_file: config = json.load(read_file)
-
-dirs_input = config['dirs_input']
-dir_input = config['dir_input']
-dir_output = config['dir_output']
-format = config['format']
-timer = config['timer'] * 60*60
 
 if __name__ == '__main__':
     while True:
+        with open('config.json', 'r') as read_file: config = json.load(read_file)
+
+        dirs_input = config['dirs_input']
+        dir_input = config['dir_input']
+        dir_output = config['dir_output']
+        format = config['format']
+        timer = config['timer'] * 60*60
+        
         dirs_archive(dirs_input, dir_output, format)
         dir_archive(dir_input, dir_output, format)
         sleep(timer)
