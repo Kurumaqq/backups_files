@@ -29,7 +29,7 @@ format = config['format']
 timer = config['timer'] * 60*60
 
 if __name__ == '__main__':
-    while True():
+    while True:
         dirs_archive(dirs_input, dir_output, format)
         dir_archive(dir_input, dir_output, format)
         sleep(timer)
